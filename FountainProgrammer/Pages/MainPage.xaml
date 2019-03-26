@@ -10,12 +10,15 @@
 
     <Grid>
 
-        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Center" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" Width="1500" IsBackEnabled="True">
+        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Center" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" Width="1500" IsBackButtonVisible="Collapsed">
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="File" Tag="FileButton"/>
-                <NavigationViewItem Content="Fixtures" Tag="FixtureEditorButton"/>
-                <NavigationViewItem Content="Components" Tag="ComponentsButton"/>
-                <NavigationViewItem Content="Layout" Tag="LayoutButton"/>
+                <NavigationViewItem Content="File" Tag="File"/>
+                <NavigationViewItem Content="Fixtures" Tag="Fixtures"/>
+                <NavigationViewItem Content="Components" Tag="Components"/>
+                <NavigationViewItem Content="Layout" Tag="Layout"/>
+                <AppBarSeparator/>
+                <Button x:Name="PlayButton" Content="Play"/>
+                <Button x:Name="StopButton" Content="Stop"/>
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </NavigationView>
