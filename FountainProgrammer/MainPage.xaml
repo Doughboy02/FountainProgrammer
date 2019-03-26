@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="FountainProgrammer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FountainProgrammer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Center" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" Width="1500" IsBackEnabled="True">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="File" Tag="FileButton"/>
+                <NavigationViewItem Content="Fixtures" Tag="FixtureEditorButton"/>
+                <NavigationViewItem Content="Components" Tag="ComponentsButton"/>
+                <NavigationViewItem Content="Layout" Tag="LayoutButton"/>
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </NavigationView>
+
+
+    </Grid>
+</Page>
