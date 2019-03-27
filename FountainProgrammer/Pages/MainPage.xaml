@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Center" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" Width="1500" IsBackButtonVisible="Collapsed">
+        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Stretch" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" IsBackButtonVisible="Collapsed">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="File" Tag="File"/>
                 <NavigationViewItem Content="Fixtures" Tag="Fixtures"/>
