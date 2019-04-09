@@ -17,7 +17,7 @@
                 <NavigationViewItem Content="Components" Tag="Components"/>
                 <NavigationViewItem Content="Layout" Tag="Layout"/>
                 <AppBarSeparator/>
-                <Button x:Name="PlayButton" Content="Play"/>
+                <Button x:Name="PlayButton" Content="Play" Click="PlayButton_Click"/>
                 <Button x:Name="StopButton" Content="Stop"/>
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
