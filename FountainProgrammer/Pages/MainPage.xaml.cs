@@ -26,6 +26,7 @@ namespace FountainProgrammer
     public sealed partial class MainPage : Page
     {
         private Dictionary<string, Type> _pages = new Dictionary<string, Type>();
+        StorageFile file;
 
         public MainPage()
         {
@@ -65,7 +66,8 @@ namespace FountainProgrammer
             // Default file name if the user does not type one in or select a file to replace
             savePicker.SuggestedFileName = "New Document";
 
-            var file = await savePicker.PickSaveFileAsync();
+            if(file == null)
+                file = await savePicker.PickSaveFileAsync();
 
             await FileIO.WriteTextAsync(file, "Testing1");
         }
