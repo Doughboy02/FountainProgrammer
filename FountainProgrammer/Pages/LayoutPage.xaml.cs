@@ -29,52 +29,13 @@ namespace FountainProgrammer.Pages
         public LayoutPage()
         {
             this.InitializeComponent();
-            CreateGrid();
+            Frame.Navigate(typeof(GridPage));
         }
 
-        
-
-        private async void CreateGrid()
+        private void CreateGrid_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Delay(2000);
-            for (int i = 0; i < 30; i++)
-            {
-                Line line = new Line();
-                if (i == 0)
-                {
-                    line.Stroke = new SolidColorBrush(Windows.UI.Colors.Red);
-                    line.StrokeThickness = 5;
-                }
-                else line.Stroke = new SolidColorBrush(Windows.UI.Colors.Gray);
-
-                line.X1 = 0;
-                line.X2 = 0;
-                line.Y2 = 304;
-                //line.StrokeThickness = 16;
-                line.Translation = new Vector3(16*i, 10, 0);
-
-                LayoutRoot.Children.Add(line);
-            }
-
-            for (int i = 0; i < 21; i++)
-            {
-                Line line = new Line();
-                if (i == 20)
-                {
-                    line.Stroke = new SolidColorBrush(Windows.UI.Colors.Green);
-                    line.StrokeThickness = 5;
-                }
-                else line.Stroke = new SolidColorBrush(Windows.UI.Colors.Gray);
-                line.X1 = 0;
-                line.X2 = 464;
-                line.Y2 = 0;
-                //line.StrokeThickness = 16;
-                line.Translation = new Vector3(0, 16*i - 6, 0);
-
-                LayoutRoot.Children.Add(line);
-            }
-
-            
+            if (int.TryParse(TestGridLines.Text, out int amount))
+                Frame.Navigate(typeof(GridPage), amount);
         }
     }
 }
