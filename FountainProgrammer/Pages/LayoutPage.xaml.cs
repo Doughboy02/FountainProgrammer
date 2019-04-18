@@ -37,5 +37,19 @@ namespace FountainProgrammer.Pages
             if (int.TryParse(TestGridLines.Text, out int amount))
                 Frame.Navigate(typeof(GridPage), amount);
         }
+
+        private void TestGridLines_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if(e.Key == Windows.System.VirtualKey.Enter)
+            {
+                if (int.TryParse(TestGridLines.Text, out int amount))
+                    Frame.Navigate(typeof(GridPage), amount);
+            }
+        }
+
+        private void GridValueSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+                Frame.Navigate(typeof(GridPage), (int)e.NewValue);
+        }
     }
 }

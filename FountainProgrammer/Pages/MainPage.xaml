@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
@@ -20,7 +21,7 @@
                 <Button x:Name="PlayButton" Content="Play" Click="PlayButton_Click"/>
                 <Button x:Name="StopButton" Content="Stop"/>
             </NavigationView.MenuItems>
-            <Frame x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Frame Padding="10" x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </NavigationView>
 
 

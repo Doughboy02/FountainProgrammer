@@ -32,6 +32,7 @@ namespace FountainProgrammer.Pages
         public GridPage()
         {
             this.InitializeComponent();
+            
         }
 
         private void CreateGrid()

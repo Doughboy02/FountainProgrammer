@@ -6,9 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="600" Width="900">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="700" Width="700">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
     </Grid>
 </Page>
