@@ -6,6 +6,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,6 +26,7 @@ namespace FountainProgrammer
     public sealed partial class MainPage : Page
     {
         private Dictionary<string, Type> _pages = new Dictionary<string, Type>();
+        StorageFile file;
 
         public MainPage()
         {
@@ -47,5 +50,28 @@ namespace FountainProgrammer
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
+
+        private async void PlayButton_Click(object sender, RoutedEventArgs e)
+        {
+            /*
+            StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
+            StorageFile sampleFile = await storageFolder.GetFileAsync("UnityProject/FountainInfo.txt");
+            await FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
+            */
+
+            FileSavePicker savePicker = new FileSavePicker();
+            savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
+            // Dropdown of file types the user can save the file as
+            savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
+            // Default file name if the user does not type one in or select a file to replace
+            savePicker.SuggestedFileName = "New Document";
+
+            if(file == null)
+                file = await savePicker.PickSaveFileAsync();
+
+            await FileIO.WriteTextAsync(file, "Testing1");
+        }
+
+        
     }
 }

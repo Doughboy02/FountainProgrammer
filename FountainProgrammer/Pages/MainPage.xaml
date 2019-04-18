@@ -7,20 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
 
-    <Grid>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Stretch" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" IsBackButtonVisible="Collapsed">
+        <NavigationView x:Name="NavView" SelectionFollowsFocus="Enabled" ItemInvoked="NavView_ItemInvoked" HorizontalAlignment="Stretch" VerticalAlignment="Top" PaneDisplayMode="Top" Margin="0,0,0,0" Width="1500" IsBackButtonVisible="Collapsed">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="File" Tag="File"/>
                 <NavigationViewItem Content="Fixtures" Tag="Fixtures"/>
                 <NavigationViewItem Content="Components" Tag="Components"/>
                 <NavigationViewItem Content="Layout" Tag="Layout"/>
                 <AppBarSeparator/>
-                <Button x:Name="PlayButton" Content="Play"/>
+                <Button x:Name="PlayButton" Content="Play" Click="PlayButton_Click"/>
                 <Button x:Name="StopButton" Content="Stop"/>
             </NavigationView.MenuItems>
-            <Frame x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Frame Padding="10" x:Name="ContentFrame" Margin="10,0,10,-906" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </NavigationView>
 
 

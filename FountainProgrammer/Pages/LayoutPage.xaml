@@ -8,7 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Frame x:Name="Frame" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="700" Width="700"/>
+        <TextBox x:Name="TestGridLines" HorizontalAlignment="Left" Height="38" Margin="835,371,0,0" Text="100" VerticalAlignment="Top" Width="70" PlaceholderText="Integers Only..." InputScope="Number" KeyDown="TestGridLines_KeyDown"/>
+        <Button x:Name="CreateGrid" Content="Create" HorizontalAlignment="Left" Margin="835,469,0,0" VerticalAlignment="Top" Click="CreateGrid_Click"/>
+        <Slider x:Name="GridValueSlider" HorizontalAlignment="Left" Margin="725,281,0,0" VerticalAlignment="Top" Width="281" ValueChanged="GridValueSlider_ValueChanged"/>
     </Grid>
 </Page>

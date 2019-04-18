@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="242,214,0,0" Text="Fixtures" TextWrapping="Wrap" VerticalAlignment="Top" Height="334" Width="350"/>
+        <TextBlock HorizontalAlignment="Left" Margin="643,180,0,0" Text="Fixtures" TextWrapping="Wrap" VerticalAlignment="Top" Height="334" Width="350"/>
+        <ColorPicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,70,0,0" ColorChanged="ColorPicker_ColorChanged"/>
 
     </Grid>
 </Page>
